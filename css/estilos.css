@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 0px;
+}
+
+
+h1, h4{
+    font-family: sans-serif;
+}
+header{
+	background-color:#a7018b;
+    text-align:center;
+    color:#fff;
+    font-size: 1.2rem;
+    padding: 10px 0px;
+}
+
+section {
+    background-color: #cb9fce;
+    padding:10px;
+}
+
+article, fieldset{
+    width:60%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+fieldset{
+    width:40%;
+}
+
+fieldset{
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 1px solid #3a043a;
+}
+
+legend{
+    font-weight: bold;
+}
+
+fieldset input{
+    display: block;
+    margin:0 auto;
+    height:30px;
+    font-size: 1.2rem;
+}
+
+button{
+    width:30%;
+    padding:5px;
+    margin-top:10px;
+    background-color:#8f0786;
+    color:#fff;
+    cursor:pointer;
+    border:none;
+    font-size:14px;
+    font-family:Arial;
+    font-weight:normal;
+}
+
+article{
+    margin: 20px auto;
+    padding:10px;
+    font-size: 20px;
+}
+
+article input{
+    margin:0 auto;
+    height:30px;
+    width: 100px;
+    font-size: 20px;
+}
+
+article button{
+    width: 30px;
+    height: 30px;
+}
+
+table{
+    margin:0 auto;
+    width:800px;
+	padding: 20px;
+	text-align:center;
+}
+
+th{
+	background-color: #a7018b;
+    padding: 3px 0px 3px;
+    font-size: 1.5rem;
+    text-align: left;
+}	
+
+td{
+	border-bottom: 2px solid #a7018b;
+    padding: 5px;
+    width: 200px;
+}
+
+.dosColumnas{
+    width: 400px;
+}
+
+#titulos{
+    text-align: right;
+}
+
+#totales{
+    text-align: left;
+}
+
+.fondo{
+    background-color: #7f2680;
+}
+
+.texto{
+    color:#fff;
+    font-size: 1.5rem;
+}

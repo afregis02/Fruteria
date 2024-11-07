@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutas y Verduras</title>
+    <script src="./js/Vue3.js"></script> 
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Frutas y Verduras</h1>
+        <h2>"La Regis"</h2>
+    </header>
+
+    <section id="seccion">
+        <article>
+            <table>
+                <tr>
+                    <th colspan="4">Frutas:</th>
+                </tr>
+                <tr v-for="(fruta, index) in frutas" :key="index">
+                    <td>
+                        <button @click="fruta.cantidad++">+</button>
+                        <input type="number" v-model.number="fruta.cantidad">
+                        <button @click="fruta.cantidad--" :disabled="fruta.cantidad <= 0">-</button>
+                    </td>
+                    <td>{{ fruta.nombre }}</td>
+                    <td>${{ fruta.precioUnitario }}</td>
+                    <td>${{ fruta.cantidad * fruta.precioUnitario }}</td> 
+                </tr>
+
+                <tr>
+                    <td colspan="3" style="text-align: right;">
+                        <h4>Subtotal</h4>
+                        <h4>IVA (16%)</h4>
+                        <h4>Total</h4>
+                    </td>
+                    <td>
+                        <h4>${{ subtotal }}</h4> 
+                        <h4>${{ iva }}</h4>     
+                        <h4>${{ total }}</h4>    
+                    </td>
+                </tr>
+            </table>
+        </article>
+
+        <fieldset>
+            <legend>Nueva Fruta</legend>
+            Nombre: <input v-model="nuevaFruta" type="text">
+            Cantidad: <input v-model.number="nuevaCantidad" type="number">
+            Precio: <input v-model.number="nuevoPrecio" type="number">
+            <button @click="agregar()">Agregar</button>
+        </fieldset>
+    </section>
+
+    <script src="./js/script.js"></script> 
+</body>
+</html>
